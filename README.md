@@ -1,50 +1,44 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Тестовое задание от VK по запросу на сервер
+#### Необходимо получить с сервера и отобразить список элементов
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Как запустить проект
+Клонировать репозиторий из GitHub:
+```bash
+git clone https://github.com/AksiniaFox/test_vk.git
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+Установить нужные библиотеки:
+```bash
+npm i
 ```
+
+Запустить проект:
+```bash
+npm run dev
+```
+
+Запустить тесты:
+```bash
+npm test
+```
+
+#### Проведены тесты по:
+- ✅ Рендеру компонентов
+- ✅ Наличие спиннера при загрузке
+- ✅ Удаление элементов по клику
+
+#### Взят публичный API с возможностью пагинации:
+https://api.github.com/search/repositories?q=javascript&sort=stars&order=asc&page=1
+
+#### Реализовано:
+- ✅ Запрос на сервер
+- ✅ Фильтрация по наличию/отсутствия описания
+- ✅ Удаление элементов
+- ✅ Редактирование элементов
+- ✅ Подгрузка элементов с бесконечным скроллом
+
+#### Проект реализован с использованием
+TS Vite React MobX HTML Git AntDesign
+
+AntDesign выбран для изучения нового функционала, в прошлом ни разу не испытывался на других проектах.
