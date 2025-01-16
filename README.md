@@ -39,6 +39,6 @@ https://api.github.com/search/repositories?q=javascript&sort=stars&order=asc&pag
 - ✅ Подгрузка элементов с бесконечным скроллом
 
 #### Проект реализован с использованием
-TS Vite React MobX HTML Git AntDesign
+TS | Vite | React | MobX | HTML | Git | AntDesign | Jest | React Testing library
 
 AntDesign выбран для изучения нового функционала, в прошлом ни разу не испытывался на других проектах.
